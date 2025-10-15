@@ -18,16 +18,22 @@ const WeddingHero = () => {
       <div className="absolute top-0 left-0 w-1/3 md:w-1/4 opacity-70 animate-float" style={{ animationDelay: '1s' }}>
         <img src={floralTopLeft} alt="" className="w-full h-auto" />
       </div>
+      <div className="absolute bottom-0 left-0 w-1/3 md:w-1/4 opacity-70 animate-float" style={{ animationDelay: '0.5s' }}>
+        <img src={floralTopLeft} alt="" className="w-full h-auto transform rotate-180" />
+      </div>
+      <div className="absolute bottom-0 right-0 w-1/3 md:w-1/4 opacity-70 animate-float" style={{ animationDelay: '1.5s' }}>
+        <img src={floralTopRight} alt="" className="w-full h-auto transform rotate-180" />
+      </div>
 
       {/* Main Content */}
       <div className={`relative z-10 text-center px-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <h2 className="font-playfair text-2xl md:text-3xl tracking-[0.3em] text-wedding-text mb-8 animate-fade-in">
-          LỄ ĐÁM NGÔ
+          LỄ DẶM NGÕ
         </h2>
 
         <div className="mb-6 animate-fade-in" style={{ animationDelay: '0.3s' }}>
           <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-wedding-rose mb-2">
-            Tô Uyên
+            Hoài Thương
           </h1>
           <div className="flex items-center justify-center gap-4 my-4">
             <div className="h-px w-20 bg-wedding-accent"></div>
@@ -35,24 +41,24 @@ const WeddingHero = () => {
             <div className="h-px w-20 bg-wedding-accent"></div>
           </div>
           <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-wedding-rose">
-            Vũ Nam
+            Quang Huy
           </h1>
         </div>
 
         <div className="mt-12 animate-fade-in" style={{ animationDelay: '0.6s' }}>
           <div className="inline-block">
             <p className="font-playfair text-xl md:text-2xl tracking-[0.2em] text-wedding-text mb-2">
-              THÁNG CHÍN
+              THÁNG MƯỜI
             </p>
             <div className="h-px bg-wedding-accent mb-3"></div>
             <p className="font-playfair text-lg md:text-xl text-wedding-text mb-1">
               THỨ BẢY
             </p>
             <p className="font-playfair text-5xl md:text-6xl font-bold text-wedding-rose mb-2">
-              27
+              1
             </p>
             <p className="font-playfair text-base md:text-lg text-wedding-text tracking-wider mb-2">
-              06/08 ÁT TỴ
+              01/11 ẤT TỴ
             </p>
             <p className="font-playfair text-3xl md:text-4xl tracking-[0.3em] text-wedding-text">
               2025
