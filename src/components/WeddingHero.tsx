@@ -12,7 +12,7 @@ const WeddingHero = () => {
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-wedding-blue via-background to-wedding-rose-light">
       {/* Animated Background Image */}
       <div 
-        className="absolute inset-0 animate-float opacity-30"
+        className="absolute inset-0 animate-float opacity-50"
         style={{
           backgroundImage: `url(${floralTopLeft})`,
           backgroundSize: 'cover',
@@ -22,7 +22,7 @@ const WeddingHero = () => {
       ></div>
       
       {/* Overlay to soften the background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-wedding-blue/70 via-background/80 to-wedding-rose-light/70"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-wedding-blue/50 via-background/60 to-wedding-rose-light/50"></div>
 
       {/* Main Content */}
       <div className={`relative z-10 text-center px-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
