@@ -9,17 +9,20 @@ const WeddingHero = () => {
   }, []);
 
   return (
-    <div 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-wedding-blue via-background to-wedding-rose-light"
-      style={{
-        backgroundImage: `url(${floralTopLeft})`,
-        backgroundSize: '400px 400px',
-        backgroundRepeat: 'repeat',
-        backgroundPosition: 'center'
-      }}
-    >
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-wedding-blue via-background to-wedding-rose-light">
+      {/* Animated Background Image */}
+      <div 
+        className="absolute inset-0 animate-float opacity-30"
+        style={{
+          backgroundImage: `url(${floralTopLeft})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      ></div>
+      
       {/* Overlay to soften the background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-wedding-blue/80 via-background/90 to-wedding-rose-light/80"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-wedding-blue/70 via-background/80 to-wedding-rose-light/70"></div>
 
       {/* Main Content */}
       <div className={`relative z-10 text-center px-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
