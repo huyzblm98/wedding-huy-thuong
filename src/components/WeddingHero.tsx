@@ -50,7 +50,7 @@ const WeddingHero = () => {
         </h2>
 
         <div className="mb-6 animate-fade-in max-w-4xl mx-auto" style={{ animationDelay: '0.3s' }}>
-          <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-wedding-rose mb-2" style={{ marginLeft: '-30%' }}>
+          <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-wedding-rose mb-2" style={{ marginLeft: '-40%' }}>
             Hoài Thương
           </h1>
           <div className="flex items-center justify-center gap-4 my-4">
@@ -58,30 +58,49 @@ const WeddingHero = () => {
             <span className="font-playfair text-3xl md:text-4xl text-wedding-text">&</span>
             <div className="h-px w-20 bg-wedding-accent"></div>
           </div>
-          <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-wedding-rose whitespace-nowrap" style={{ marginLeft: '30%' }}>
+          <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-wedding-rose whitespace-nowrap" style={{ marginLeft: '40%' }}>
             Quang Huy
           </h1>
         </div>
 
         <div className="mt-14 animate-fade-in" style={{ animationDelay: '0.6s' }}>
           <div className="inline-block">
-            <div className="flex items-start justify-between gap-8 mb-3">
-              <div className="text-left">
-                <p className="font-playfair text-2xl md:text-3xl tracking-[0.2em] text-wedding-text">
-                  THÁNG MƯỜI
-                </p>
-                <p className="font-playfair text-xl md:text-2xl text-wedding-text mt-1">
+            {/* THÁNG 10 centered */}
+            <p className="font-playfair text-2xl md:text-3xl tracking-[0.3em] text-wedding-text text-center mb-3">
+              THÁNG 10
+            </p>
+            
+            {/* Two parallel lines with gap = 70% of THÁNG 10 width */}
+            <div className="flex items-center justify-center gap-[70%] mb-3">
+              <div className="h-px w-32 bg-wedding-accent"></div>
+              <div className="h-px w-32 bg-wedding-accent"></div>
+            </div>
+            
+            {/* THỨ BẢY, 1, 12/09 ẤT TỴ in between the lines */}
+            <div className="flex items-center justify-center gap-8 mb-3">
+              <div className="text-center">
+                <p className="font-playfair text-lg md:text-xl text-wedding-text">
                   THỨ BẢY
                 </p>
               </div>
               <p className="font-playfair text-7xl md:text-8xl font-bold text-wedding-rose leading-none">
                 1
               </p>
+              <div className="text-center">
+                <p className="font-playfair text-lg md:text-xl text-wedding-text">
+                  12/09 ẤT TỴ
+                </p>
+              </div>
             </div>
-            <p className="font-playfair text-2xl md:text-3xl text-wedding-text tracking-wider mb-2">
-              01/11 ẤT TỴ
-            </p>
-            <p className="font-playfair text-4xl md:text-5xl tracking-[0.3em] text-wedding-text">
+            
+            {/* Line 3 below THỨ BẢY and Line 4 below 12/09 ẤT TỴ */}
+            <div className="flex items-center justify-center gap-[70%] mb-4">
+              <div className="h-px w-32 bg-wedding-accent"></div>
+              <div className="h-px w-32 bg-wedding-accent"></div>
+            </div>
+            
+            {/* 2025 below the large number */}
+            <p className="font-playfair text-4xl md:text-5xl tracking-[0.3em] text-wedding-text text-center">
               2025
             </p>
           </div>
@@ -108,6 +127,7 @@ const WeddingHero = () => {
       <audio 
         ref={audioRef}
         loop
+        autoPlay
         preload="auto"
       >
         <source src="/cuoi-nhau-di.mp3" type="audio/mpeg" />
