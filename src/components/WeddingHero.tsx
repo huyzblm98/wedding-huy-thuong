@@ -67,7 +67,7 @@ const WeddingHero = () => {
 <div className="animate-fade-in" style={{ marginTop: '20%', animationDelay: '0.6s' }}>
   <div className="inline-block">
     {/* THÁNG 10 centered */}
-    <p className="font-playfair text-3xl md:text-4xl tracking-[0.3em] text-wedding-text text-center mb-4">
+    <p className="font-playfair text-4xl md:text-5xl tracking-[0.3em] text-wedding-text text-center">
       THÁNG 10
     </p>
     
@@ -79,7 +79,7 @@ const WeddingHero = () => {
       {/* THỨ BẢY, 01, 12.09(ẤT TỴ) centered between lines */}
       <div className="flex items-center justify-center gap-6 md:gap-12 -mt-4 mb-4">
         <div className="text-center">
-          <p className="font-playfair text-2g md:text-2x1 text-wedding-text tracking-wider">
+         <p className="font-playfair text-3g md:text-4x1 text-wedding-text tracking-wider">
             THỨ BẢY
           </p>
         </div>
@@ -87,7 +87,7 @@ const WeddingHero = () => {
           01
         </p>
         <div className="text-center">
-          <p className="font-playfair text-2g md:text-2x1 text-wedding-text tracking-wider">
+          <p className="font-playfair text-3g md:text-4x1 text-wedding-text tracking-wider">
             12.09(ẤT TỴ)
           </p>
         </div>
