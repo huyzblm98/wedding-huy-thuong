@@ -45,11 +45,11 @@ const WeddingHero = () => {
 
       {/* Main Content */}
       <div className={`relative z-10 text-center px-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <div className="absolute top+[50px] w-full text-center">
+        {/* <div className="absolute top+[50px] w-full text-center">
           <h2 className="font-playfair text-4xl md:text-6xl lg:text-7xl tracking-[0.3em] text-wedding-text mb-12 animate-fade-in">
             LỄ DẠM NGÕ
           </h2>
-        </div>
+        </div> */}
 
         <div className="mb-6 animate-fade-in max-w-4xl mx-auto" style={{ animationDelay: '0.3s' }}>
           <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-wedding-rose mb-2" style={{ marginLeft: '-45%' }}>
