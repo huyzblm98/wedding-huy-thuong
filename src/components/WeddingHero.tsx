@@ -12,7 +12,7 @@ const WeddingHero = () => {
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-wedding-blue via-background to-wedding-rose-light">
       {/* Animated Background Image */}
       <div 
-        className="absolute inset-0 animate-float opacity-80"
+        className="absolute inset-0 animate-float opacity-90"
         style={{
           backgroundImage: `url(${floralTopLeft})`,
           backgroundSize: 'cover',
@@ -26,7 +26,7 @@ const WeddingHero = () => {
 
       {/* Main Content */}
       <div className={`relative z-10 text-center px-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <h2 className="font-playfair text-2xl md:text-4xl lg:text-5xl tracking-[0.3em] text-wedding-text mb-12 animate-fade-in">
+        <h2 className="font-playfair text-3xl md:text-5xl lg:text-6xl tracking-[0.3em] text-wedding-text mb-16 animate-fade-in">
           LỄ DẠM NGÕ
         </h2>
 
@@ -39,24 +39,24 @@ const WeddingHero = () => {
             <span className="font-playfair text-3xl md:text-4xl text-wedding-text">&</span>
             <div className="h-px w-20 bg-wedding-accent"></div>
           </div>
-          <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-wedding-rose text-right" style={{ marginLeft: '25%' }}>
+          <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-wedding-rose" style={{ marginLeft: '25%' }}>
             Quang Huy
           </h1>
         </div>
 
         <div className="mt-12 animate-fade-in" style={{ animationDelay: '0.6s' }}>
           <div className="inline-block">
-            <p className="font-playfair text-2xl md:text-3xl tracking-[0.2em] text-wedding-text mb-2">
+            <p className="font-playfair text-3xl md:text-4xl tracking-[0.2em] text-wedding-text mb-2">
               THÁNG MƯỜI
             </p>
             <div className="h-px bg-wedding-accent mb-3"></div>
-            <p className="font-playfair text-xl md:text-2xl text-wedding-text mb-1">
+            <p className="font-playfair text-2xl md:text-3xl text-wedding-text mb-1">
               THỨ BẢY
             </p>
-            <p className="font-playfair text-6xl md:text-7xl font-bold text-wedding-rose mb-2">
+            <p className="font-playfair text-7xl md:text-8xl font-bold text-wedding-rose mb-2">
               1
             </p>
-            <p className="font-playfair text-lg md:text-xl text-wedding-text tracking-wider mb-2">
+            <p className="font-playfair text-2xl md:text-3xl text-wedding-text tracking-wider mb-2">
               01/11 ẤT TỴ
             </p>
             <p className="font-playfair text-4xl md:text-5xl tracking-[0.3em] text-wedding-text">
