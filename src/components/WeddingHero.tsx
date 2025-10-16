@@ -66,8 +66,8 @@ const WeddingHero = () => {
         
 <div className="animate-fade-in" style={{ marginTop: '20%', animationDelay: '0.6s' }}>
   <div className="inline-block">
-    {/* THÁNG 9 centered */}
-    <p className="font-playfair text-2xl md:text-3xl tracking-[0.3em] text-wedding-text text-center mb-4">
+    {/* THÁNG 10 centered */}
+    <p className="font-playfair text-3xl md:text-4xl tracking-[0.3em] text-wedding-text text-center mb-4">
       THÁNG 10
     </p>
     
@@ -76,10 +76,10 @@ const WeddingHero = () => {
       {/* Top line */}
       <div className="h-px bg-wedding-accent mb-8"></div>
       
-      {/* THỨ BẢY, 27, 00.08(ẤT TỴ) centered between lines */}
+      {/* THỨ BẢY, 01, 12.09(ẤT TỴ) centered between lines */}
       <div className="flex items-center justify-center gap-6 md:gap-12 -mt-4 mb-4">
         <div className="text-center">
-          <p className="font-playfair text-base md:text-lg text-wedding-text tracking-wider">
+          <p className="font-playfair text-2g md:text-2x1 text-wedding-text tracking-wider">
             THỨ BẢY
           </p>
         </div>
@@ -87,7 +87,7 @@ const WeddingHero = () => {
           01
         </p>
         <div className="text-center">
-          <p className="font-playfair text-base md:text-lg text-wedding-text tracking-wide">
+          <p className="font-playfair text-2g md:text-2x1 text-wedding-text tracking-wider">
             12.09(ẤT TỴ)
           </p>
         </div>
