@@ -64,7 +64,7 @@ const WeddingHero = () => {
         </div>
 
         
-<div className="animate-fade-in" style={{ marginTop: '100px', animationDelay: '0.6s' }}>
+<div className="animate-fade-in" style={{ marginTop: '20%', animationDelay: '0.6s' }}>
   <div className="inline-block">
     {/* THÁNG 9 centered */}
     <p className="font-playfair text-2xl md:text-3xl tracking-[0.3em] text-wedding-text text-center mb-4">
