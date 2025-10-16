@@ -45,7 +45,7 @@ const WeddingHero = () => {
 
       {/* Main Content */}
       <div className={`relative z-10 text-center px-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <h2 className="font-playfair text-3xl md:text-5xl lg:text-6xl tracking-[0.3em] text-wedding-text mb-16 animate-fade-in">
+        <h2 className="font-playfair text-4xl md:text-6xl lg:text-7xl tracking-[0.3em] text-wedding-text mb-12 animate-fade-in">
           LỄ DẠM NGÕ
         </h2>
 
@@ -63,7 +63,7 @@ const WeddingHero = () => {
           </h1>
         </div>
 
-        <div className="mt-12 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+        <div className="mt-14 animate-fade-in" style={{ animationDelay: '0.6s' }}>
           <div className="inline-block">
             <p className="font-playfair text-3xl md:text-4xl tracking-[0.2em] text-wedding-text mb-2">
               THÁNG MƯỜI
