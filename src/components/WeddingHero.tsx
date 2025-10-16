@@ -67,7 +67,7 @@ const WeddingHero = () => {
           <div className="inline-block">
             {/* THÁNG 10 centered */}
             <p className="font-playfair text-2xl md:text-3xl tracking-[0.3em] text-wedding-text text-center mb-3">
-              THÁNG 10
+              THÁNG MƯỜI
             </p>
             
             {/* Two parallel lines with gap = 70% of THÁNG 10 width */}
