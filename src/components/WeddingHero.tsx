@@ -1,11 +1,30 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import floralTopLeft from "@/assets/floral-top-left.png";
 
 const WeddingHero = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
     setIsVisible(true);
+    
+    // Play music on user interaction
+    const playMusic = () => {
+      if (audioRef.current) {
+        audioRef.current.play().catch(err => console.log("Auto-play prevented:", err));
+      }
+    };
+    
+    // Try to play after a small delay
+    const timer = setTimeout(playMusic, 500);
+    
+    // Also play on any user interaction
+    document.addEventListener('click', playMusic, { once: true });
+    
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener('click', playMusic);
+    };
   }, []);
 
   return (
@@ -39,7 +58,7 @@ const WeddingHero = () => {
             <span className="font-playfair text-3xl md:text-4xl text-wedding-text">&</span>
             <div className="h-px w-20 bg-wedding-accent"></div>
           </div>
-          <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-wedding-rose" style={{ marginLeft: '25%' }}>
+          <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-wedding-rose whitespace-nowrap" style={{ marginLeft: '25%' }}>
             Quang Huy
           </h1>
         </div>
@@ -81,6 +100,15 @@ const WeddingHero = () => {
           backgroundSize: '50px 50px'
         }}></div>
       </div>
+
+      {/* Background Music */}
+      <audio 
+        ref={audioRef}
+        loop
+        preload="auto"
+      >
+        <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Kai_Engel/Satin/Kai_Engel_-_01_-_Weve_Been_Falling.mp3" type="audio/mpeg" />
+      </audio>
     </div>
   );
 };
