@@ -63,48 +63,45 @@ const WeddingHero = () => {
           </h1>
         </div>
 
-        <div className="mt-14 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-          <div className="inline-block">
-            {/* THÁNG 10 centered */}
-            <p className="font-playfair text-2xl md:text-3xl tracking-[0.3em] text-wedding-text text-center mb-3">
-              THÁNG MƯỜI
-            </p>
-            
-            {/* Two parallel lines with gap = 70% of THÁNG 10 width */}
-            <div className="flex items-center justify-center gap-[70%] mb-3">
-              <div className="h-px w-32 bg-wedding-accent"></div>
-              <div className="h-px w-32 bg-wedding-accent"></div>
-            </div>
-            
-            {/* THỨ BẢY, 1, 12/09 ẤT TỴ in between the lines */}
-            <div className="flex items-center justify-center gap-8 mb-3">
-              <div className="text-center">
-                <p className="font-playfair text-lg md:text-xl text-wedding-text">
-                  THỨ BẢY
-                </p>
-              </div>
-              <p className="font-playfair text-7xl md:text-8xl font-bold text-wedding-rose leading-none">
-                1
-              </p>
-              <div className="text-center">
-                <p className="font-playfair text-lg md:text-xl text-wedding-text">
-                  12/09 ẤT TỴ
-                </p>
-              </div>
-            </div>
-            
-            {/* Line 3 below THỨ BẢY and Line 4 below 12/09 ẤT TỴ */}
-            <div className="flex items-center justify-center gap-[70%] mb-4">
-              <div className="h-px w-32 bg-wedding-accent"></div>
-              <div className="h-px w-32 bg-wedding-accent"></div>
-            </div>
-            
-            {/* 2025 below the large number */}
-            <p className="font-playfair text-4xl md:text-5xl tracking-[0.3em] text-wedding-text text-center">
-              2025
-            </p>
-          </div>
+<div className="mt-14 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+  <div className="inline-block">
+    {/* THÁNG 9 centered */}
+    <p className="font-playfair text-2xl md:text-3xl tracking-[0.3em] text-wedding-text text-center mb-4">
+      THÁNG 9
+    </p>
+    
+    {/* Container for lines and content */}
+    <div className="relative mb-4">
+      {/* Top line */}
+      <div className="h-px bg-wedding-accent mb-8"></div>
+      
+      {/* THỨ BẢY, 27, 00.08(ẤT TỴ) centered between lines */}
+      <div className="flex items-center justify-center gap-6 md:gap-12 -mt-4 mb-4">
+        <div className="text-center">
+          <p className="font-playfair text-base md:text-lg text-wedding-text tracking-wider">
+            THỨ BẢY
+          </p>
         </div>
+        <p className="font-playfair text-7xl md:text-8xl font-bold text-wedding-rose leading-none">
+          27
+        </p>
+        <div className="text-center">
+          <p className="font-playfair text-base md:text-lg text-wedding-text tracking-wide">
+            00.08(ẤT TỴ)
+          </p>
+        </div>
+      </div>
+      
+      {/* Bottom line */}
+      <div className="h-px bg-wedding-accent"></div>
+    </div>
+    
+    {/* 2025 below */}
+    <p className="font-playfair text-4xl md:text-5xl tracking-[0.3em] text-wedding-text text-center">
+      2025
+    </p>
+  </div>
+</div>
 
         {/* Decorative elements */}
         <div className="mt-12 flex justify-center gap-2 animate-fade-in" style={{ animationDelay: '0.9s' }}>
