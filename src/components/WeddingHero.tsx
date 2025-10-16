@@ -12,7 +12,7 @@ const WeddingHero = () => {
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-wedding-blue via-background to-wedding-rose-light">
       {/* Animated Background Image */}
       <div 
-        className="absolute inset-0 animate-float opacity-70"
+        className="absolute inset-0 animate-float opacity-80"
         style={{
           backgroundImage: `url(${floralTopLeft})`,
           backgroundSize: 'cover',
@@ -26,12 +26,12 @@ const WeddingHero = () => {
 
       {/* Main Content */}
       <div className={`relative z-10 text-center px-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl tracking-[0.3em] text-wedding-text mb-8 animate-fade-in">
+        <h2 className="font-playfair text-2xl md:text-4xl lg:text-5xl tracking-[0.3em] text-wedding-text mb-12 animate-fade-in">
           LỄ DẠM NGÕ
         </h2>
 
         <div className="mb-6 animate-fade-in max-w-4xl mx-auto" style={{ animationDelay: '0.3s' }}>
-          <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-wedding-rose mb-2 text-left">
+          <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-wedding-rose mb-2 text-left" style={{ marginLeft: '-50%' }}>
             Hoài Thương
           </h1>
           <div className="flex items-center justify-center gap-4 my-4">
@@ -39,7 +39,7 @@ const WeddingHero = () => {
             <span className="font-playfair text-3xl md:text-4xl text-wedding-text">&</span>
             <div className="h-px w-20 bg-wedding-accent"></div>
           </div>
-          <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-wedding-rose text-right">
+          <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-wedding-rose text-right" style={{ marginLeft: '25%' }}>
             Quang Huy
           </h1>
         </div>
