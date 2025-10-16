@@ -63,11 +63,12 @@ const WeddingHero = () => {
           </h1>
         </div>
 
-<div className="mt-14 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+        
+<div className="animate-fade-in" style={{ marginTop: '100px', animationDelay: '0.6s' }}>
   <div className="inline-block">
     {/* THÁNG 9 centered */}
     <p className="font-playfair text-2xl md:text-3xl tracking-[0.3em] text-wedding-text text-center mb-4">
-      THÁNG 9
+      THÁNG 10
     </p>
     
     {/* Container for lines and content */}
@@ -83,11 +84,11 @@ const WeddingHero = () => {
           </p>
         </div>
         <p className="font-playfair text-7xl md:text-8xl font-bold text-wedding-rose leading-none">
-          27
+          01
         </p>
         <div className="text-center">
           <p className="font-playfair text-base md:text-lg text-wedding-text tracking-wide">
-            00.08(ẤT TỴ)
+            12.09(ẤT TỴ)
           </p>
         </div>
       </div>
