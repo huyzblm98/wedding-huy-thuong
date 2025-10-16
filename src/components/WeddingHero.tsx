@@ -52,7 +52,7 @@ const WeddingHero = () => {
         </div> */}
 
         <div className="mb-6 animate-fade-in max-w-4xl mx-auto" style={{ animationDelay: '0.3s' }}>
-          <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-wedding-rose mb-2" style={{ marginLeft: '-45%' }}>
+          <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-wedding-rose mb-2" style={{ marginLeft: '-50%' }}>
             Hoài Thương
           </h1>
           <div className="flex items-center justify-center gap-4 my-4">
@@ -60,7 +60,7 @@ const WeddingHero = () => {
             <span className="font-playfair text-3xl md:text-4xl text-wedding-text">&</span>
             <div className="h-px w-20 bg-wedding-accent"></div>
           </div>
-          <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-wedding-rose whitespace-nowrap" style={{ marginLeft: '45%' }}>
+          <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-wedding-rose whitespace-nowrap" style={{ marginLeft: '50%' }}>
             Quang Huy
           </h1>
         </div>
