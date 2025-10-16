@@ -79,7 +79,7 @@ const WeddingHero = () => {
       {/* THỨ BẢY, 01, 12.09(ẤT TỴ) centered between lines */}
       <div className="flex items-center justify-center gap-6 md:gap-12 -mt-4 mb-4">
         <div className="text-center">
-         <p className="font-playfair text-3g md:text-4x1 text-wedding-text tracking-wider">
+         <p className="font-playfair text-4xl md:text-5xl tracking-[0.3em] text-wedding-text text-center">
             THỨ BẢY
           </p>
         </div>
@@ -87,7 +87,7 @@ const WeddingHero = () => {
           01
         </p>
         <div className="text-center">
-          <p className="font-playfair text-3g md:text-4x1 text-wedding-text tracking-wider">
+          <p className="font-playfair text-4xl md:text-5xl tracking-[0.3em] text-wedding-text text-center">
             12.09(ẤT TỴ)
           </p>
         </div>
