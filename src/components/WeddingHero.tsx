@@ -50,7 +50,7 @@ const WeddingHero = () => {
         </h2>
 
         <div className="mb-6 animate-fade-in max-w-4xl mx-auto" style={{ animationDelay: '0.3s' }}>
-          <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-wedding-rose mb-2 text-left" style={{ marginLeft: '-50%' }}>
+          <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-wedding-rose mb-2" style={{ marginLeft: '-30%' }}>
             Hoài Thương
           </h1>
           <div className="flex items-center justify-center gap-4 my-4">
@@ -58,23 +58,26 @@ const WeddingHero = () => {
             <span className="font-playfair text-3xl md:text-4xl text-wedding-text">&</span>
             <div className="h-px w-20 bg-wedding-accent"></div>
           </div>
-          <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-wedding-rose whitespace-nowrap" style={{ marginLeft: '25%' }}>
+          <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-wedding-rose whitespace-nowrap" style={{ marginLeft: '30%' }}>
             Quang Huy
           </h1>
         </div>
 
         <div className="mt-14 animate-fade-in" style={{ animationDelay: '0.6s' }}>
           <div className="inline-block">
-            <p className="font-playfair text-3xl md:text-4xl tracking-[0.2em] text-wedding-text mb-2">
-              THÁNG MƯỜI
-            </p>
-            <div className="h-px bg-wedding-accent mb-3"></div>
-            <p className="font-playfair text-2xl md:text-3xl text-wedding-text mb-1">
-              THỨ BẢY
-            </p>
-            <p className="font-playfair text-7xl md:text-8xl font-bold text-wedding-rose mb-2">
-              1
-            </p>
+            <div className="flex items-start justify-between gap-8 mb-3">
+              <div className="text-left">
+                <p className="font-playfair text-2xl md:text-3xl tracking-[0.2em] text-wedding-text">
+                  THÁNG MƯỜI
+                </p>
+                <p className="font-playfair text-xl md:text-2xl text-wedding-text mt-1">
+                  THỨ BẢY
+                </p>
+              </div>
+              <p className="font-playfair text-7xl md:text-8xl font-bold text-wedding-rose leading-none">
+                1
+              </p>
+            </div>
             <p className="font-playfair text-2xl md:text-3xl text-wedding-text tracking-wider mb-2">
               01/11 ẤT TỴ
             </p>
@@ -107,7 +110,7 @@ const WeddingHero = () => {
         loop
         preload="auto"
       >
-        <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Kai_Engel/Satin/Kai_Engel_-_01_-_Weve_Been_Falling.mp3" type="audio/mpeg" />
+        <source src="/cuoi-nhau-di.mp3" type="audio/mpeg" />
       </audio>
     </div>
   );
