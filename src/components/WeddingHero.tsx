@@ -50,7 +50,7 @@ const WeddingHero = () => {
       {hearts.map((heart) => (
         <div
           key={heart.id}
-          className="absolute text-wedding-rose opacity-70 pointer-events-none animate-fall"
+          className="absolute text-wedding-rose opacity-90 pointer-events-none animate-fall"
           style={{
             left: `${heart.left}%`,
             top: '-50px',
@@ -99,9 +99,9 @@ const WeddingHero = () => {
         
 <div className="animate-fade-in px-4" style={{ marginTop: '15%', animationDelay: '0.6s' }}>
   <div className="inline-block">
-    {/* THÁNG 10 centered */}
+    {/* THÁNG 11 centered */}
     <p className="font-playfair text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0.2em] sm:tracking-[0.3em] text-wedding-text text-center">
-      THÁNG 10
+      THÁNG 11
     </p>
     
     {/* Container for lines and content */}
