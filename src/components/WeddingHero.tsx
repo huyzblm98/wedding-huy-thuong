@@ -57,7 +57,7 @@ const WeddingHero = () => {
             animationDelay: `${heart.delay}s`,
             animationDuration: `${heart.duration}s`,
             fontSize: `${20 + Math.random() * 15}px`,
-            color: '#d81b60'
+            color: '#ff0000'
           }}
         >
           ♥
