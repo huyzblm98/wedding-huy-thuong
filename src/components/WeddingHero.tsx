@@ -45,29 +45,29 @@ const WeddingHero = () => {
 
       {/* Main Content */}
       <div className={`relative z-10 text-center px-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <h2 className="font-playfair text-4xl md:text-6xl lg:text-7xl tracking-[0.3em] text-wedding-text mb-12 animate-fade-in">
+        <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl tracking-[0.2em] sm:tracking-[0.3em] text-wedding-text mb-8 sm:mb-12 animate-fade-in px-4">
           LỄ DẠM NGÕ
         </h2>
 
-        <div className="mb-6 animate-fade-in max-w-4xl mx-auto" style={{ marginTop: '20%', animationDelay: '0.3s' }}>
-          <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-wedding-rose mb-2" style={{ marginLeft: '-120%' }}>
+        <div className="mb-6 animate-fade-in max-w-4xl mx-auto px-4" style={{ marginTop: '15%', animationDelay: '0.3s' }}>
+          <h1 className="font-script text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-wedding-rose mb-2 translate-x-[-35%] sm:translate-x-[-45%] md:translate-x-[-50%]">
             Hoài Thương
           </h1>
           <div className="flex items-center justify-center gap-4 my-4">
-            <div className="h-px w-20 bg-wedding-accent"></div>
-            <span className="font-playfair text-3xl md:text-4xl text-wedding-text">&</span>
-            <div className="h-px w-20 bg-wedding-accent"></div>
+            <div className="h-px w-12 sm:w-20 bg-wedding-accent"></div>
+            <span className="font-playfair text-2xl sm:text-3xl md:text-4xl text-wedding-text">&</span>
+            <div className="h-px w-12 sm:w-20 bg-wedding-accent"></div>
           </div>
-          <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-wedding-rose whitespace-nowrap" style={{ marginLeft: '60%' }}>
+          <h1 className="font-script text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-wedding-rose translate-x-[35%] sm:translate-x-[45%] md:translate-x-[50%]">
             Quang Huy
           </h1>
         </div>
 
         
-<div className="animate-fade-in" style={{ marginTop: '20%', animationDelay: '0.6s' }}>
+<div className="animate-fade-in px-4" style={{ marginTop: '15%', animationDelay: '0.6s' }}>
   <div className="inline-block">
     {/* THÁNG 10 centered */}
-    <p className="font-playfair text-4xl md:text-5xl tracking-[0.3em] text-wedding-text text-center">
+    <p className="font-playfair text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0.2em] sm:tracking-[0.3em] text-wedding-text text-center">
       THÁNG 10
     </p>
     
@@ -77,18 +77,18 @@ const WeddingHero = () => {
       <div className="h-px bg-wedding-accent mb-8"></div>
       
       {/* THỨ BẢY, 01, 12.09(ẤT TỴ) centered between lines */}
-      <div className="flex items-center justify-center gap-6 md:gap-12 -mt-4 mb-4">
+      <div className="flex items-center justify-center gap-3 sm:gap-6 md:gap-12 -mt-4 mb-4">
         <div className="text-center">
-         <p className="font-playfair text-3g md:text-4xl text-wedding-text tracking-wider">
+         <p className="font-playfair text-lg sm:text-2xl md:text-3xl lg:text-4xl text-wedding-text tracking-wider">
             THỨ BẢY
           </p>
         </div>
-        <p className="font-playfair text-7xl md:text-8xl font-bold text-wedding-rose leading-none">
+        <p className="font-playfair text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-wedding-rose leading-none">
           01
         </p>
         <div className="text-center">
-          <p className="font-playfair text-3g md:text-4xl text-wedding-text tracking-wider">
-            12.09(ẤT TỴ)
+          <p className="font-playfair text-lg sm:text-2xl md:text-3xl lg:text-4xl text-wedding-text tracking-wider">
+            12/09 ẤT TỴ
           </p>
         </div>
       </div>
@@ -98,7 +98,7 @@ const WeddingHero = () => {
     </div>
     
     {/* 2025 below */}
-    <p className="font-playfair text-4xl md:text-5xl tracking-[0.3em] text-wedding-text text-center">
+    <p className="font-playfair text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0.2em] sm:tracking-[0.3em] text-wedding-text text-center">
       2025
     </p>
   </div>
