@@ -4,9 +4,24 @@ import floralTopLeft from "@/assets/floral-top-left.png";
 const WeddingHero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
+  const [hearts, setHearts] = useState<Array<{ id: number; left: number; delay: number; duration: number }>>([]);
 
   useEffect(() => {
     setIsVisible(true);
+    
+    // Generate falling hearts
+    const generateHearts = () => {
+      const newHearts = Array.from({ length: 15 }, (_, i) => ({
+        id: i,
+        left: Math.random() * 100,
+        delay: Math.random() * 5,
+        duration: 8 + Math.random() * 4
+      }));
+      setHearts(newHearts);
+    };
+    
+    generateHearts();
+    const heartsInterval = setInterval(generateHearts, 12000);
     
     // Play music on user interaction
     const playMusic = () => {
@@ -23,12 +38,30 @@ const WeddingHero = () => {
     
     return () => {
       clearTimeout(timer);
+      clearInterval(heartsInterval);
       document.removeEventListener('click', playMusic);
     };
   }, []);
 
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-wedding-blue via-background to-wedding-rose-light">
+      
+      {/* Falling Hearts */}
+      {hearts.map((heart) => (
+        <div
+          key={heart.id}
+          className="absolute text-wedding-rose opacity-70 pointer-events-none animate-fall"
+          style={{
+            left: `${heart.left}%`,
+            top: '-50px',
+            animationDelay: `${heart.delay}s`,
+            animationDuration: `${heart.duration}s`,
+            fontSize: `${20 + Math.random() * 15}px`
+          }}
+        >
+          ♥
+        </div>
+      ))}
       {/* Animated Background Image */}
       <div 
         className="absolute inset-0 animate-float opacity-90"
