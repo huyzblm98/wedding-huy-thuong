@@ -57,9 +57,9 @@ const WeddingHero = () => {
             animationDelay: `${heart.delay}s`,
             animationDuration: `${heart.duration}s`,
             fontSize: `${25 + Math.random() * 20}px`,
-            color: '#ff0000',
+            color: '#cc0000',
             opacity: 1,
-            textShadow: '0 0 10px rgba(255, 0, 0, 0.8)'
+            textShadow: '0 0 15px rgba(204, 0, 0, 1), 0 0 5px rgba(204, 0, 0, 1)'
           }}
         >
           ♥
@@ -92,9 +92,10 @@ const WeddingHero = () => {
                 key={index}
                 className="inline-block"
                 style={{
-                  animation: 'bounce 0.6s ease-in-out',
-                  animationDelay: `${5 + index * 0.1}s`,
-                  animationIterationCount: '1'
+                  animation: 'bounce 0.6s ease-in-out infinite',
+                  animationDelay: `${index * 0.1}s`,
+                  animationDuration: '10s',
+                  animationTimingFunction: `steps(1, end)`
                 }}
               >
                 {char === ' ' ? '\u00A0' : char}
@@ -112,9 +113,10 @@ const WeddingHero = () => {
                 key={index}
                 className="inline-block"
                 style={{
-                  animation: 'bounce 0.6s ease-in-out',
-                  animationDelay: `${6 + index * 0.1}s`,
-                  animationIterationCount: '1'
+                  animation: 'bounce 0.6s ease-in-out infinite',
+                  animationDelay: `${0.5 + index * 0.1}s`,
+                  animationDuration: '10s',
+                  animationTimingFunction: `steps(1, end)`
                 }}
               >
                 {char === ' ' ? '\u00A0' : char}
