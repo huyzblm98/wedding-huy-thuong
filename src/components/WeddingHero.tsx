@@ -50,14 +50,16 @@ const WeddingHero = () => {
       {hearts.map((heart) => (
         <div
           key={heart.id}
-          className="absolute pointer-events-none animate-fall font-bold"
+          className="absolute pointer-events-none animate-fall font-black"
           style={{
             left: `${heart.left}%`,
             top: '-50px',
             animationDelay: `${heart.delay}s`,
             animationDuration: `${heart.duration}s`,
-            fontSize: `${20 + Math.random() * 15}px`,
-            color: '#ff0000'
+            fontSize: `${25 + Math.random() * 20}px`,
+            color: '#ff0000',
+            opacity: 1,
+            textShadow: '0 0 10px rgba(255, 0, 0, 0.8)'
           }}
         >
           ♥
@@ -88,11 +90,11 @@ const WeddingHero = () => {
             {"Hoài Thương".split('').map((char, index) => (
               <span
                 key={index}
-                className="inline-block animate-bounce"
+                className="inline-block"
                 style={{
-                  animationDelay: `${index * 0.1}s`,
-                  animationDuration: '1s',
-                  animationIterationCount: 'infinite'
+                  animation: 'bounce 0.6s ease-in-out',
+                  animationDelay: `${5 + index * 0.1}s`,
+                  animationIterationCount: '1'
                 }}
               >
                 {char === ' ' ? '\u00A0' : char}
@@ -108,11 +110,11 @@ const WeddingHero = () => {
             {"Quang Huy".split('').map((char, index) => (
               <span
                 key={index}
-                className="inline-block animate-bounce"
+                className="inline-block"
                 style={{
-                  animationDelay: `${index * 0.1}s`,
-                  animationDuration: '1s',
-                  animationIterationCount: 'infinite'
+                  animation: 'bounce 0.6s ease-in-out',
+                  animationDelay: `${6 + index * 0.1}s`,
+                  animationIterationCount: '1'
                 }}
               >
                 {char === ' ' ? '\u00A0' : char}
