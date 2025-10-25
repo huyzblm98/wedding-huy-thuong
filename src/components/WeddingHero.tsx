@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import floralTopLeft from "@/assets/floral-top-left.png";
+import backgroundDamngo from "@/assets/background_damngo.png";
 
 const WeddingHero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -69,7 +69,7 @@ const WeddingHero = () => {
       <div 
         className="absolute inset-0 animate-float opacity-90"
         style={{
-          backgroundImage: `url(${floralTopLeft})`,
+          backgroundImage: `url(${backgroundDamngo})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -190,7 +190,7 @@ const WeddingHero = () => {
         autoPlay
         preload="auto"
       >
-        <source src="/cuoi-nhau-di.mp3" type="audio/mpeg" />
+        <source src="/em-dong-y.mp3" type="audio/mpeg" />
       </audio>
     </div>
   );
