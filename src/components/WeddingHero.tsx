@@ -70,7 +70,7 @@ const WeddingHero = () => {
         className="absolute inset-0 animate-float opacity-90"
         style={{
           backgroundImage: `url(${floralTopLeft})`,
-          backgroundSize: 'cover',
+          backgroundSize: '60%',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
         }}
@@ -86,7 +86,7 @@ const WeddingHero = () => {
         </h2>
 
         <div className="mb-6 animate-fade-in max-w-4xl mx-auto px-4" style={{ marginTop: '15%', animationDelay: '0.3s' }}>
-          <h1 className="font-script text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-wedding-rose mb-2 -translate-x-[15%] sm:-translate-x-[25%] md:-translate-x-[40%] lg:-translate-x-[50%]" style={{ textShadow: '0 0 30px rgba(255, 105, 135, 0.6), 0 0 60px rgba(255, 105, 135, 0.4)' }}>
+          <h1 className="font-msmadi text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-wedding-rose mb-2 -translate-x-[15%] sm:-translate-x-[25%] md:-translate-x-[40%] lg:-translate-x-[50%]" style={{ textShadow: '0 0 30px rgba(255, 105, 135, 0.6), 0 0 60px rgba(255, 105, 135, 0.4)' }}>
             {"Hoài Thương".split('').map((char, index) => (
               <span
                 key={index}
@@ -107,7 +107,7 @@ const WeddingHero = () => {
             <span className="font-playfair text-2xl sm:text-3xl md:text-4xl text-wedding-text">&</span>
             <div className="h-px w-12 sm:w-20 bg-wedding-accent"></div>
           </div>
-          <h1 className="font-script text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-wedding-rose translate-x-[15%] sm:translate-x-[25%] md:translate-x-[40%] lg:translate-x-[50%]" style={{ textShadow: '0 0 30px rgba(255, 105, 135, 0.6), 0 0 60px rgba(255, 105, 135, 0.4)' }}>
+          <h1 className="font-msmadi text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-wedding-rose translate-x-[15%] sm:translate-x-[25%] md:translate-x-[40%] lg:translate-x-[50%]" style={{ textShadow: '0 0 30px rgba(255, 105, 135, 0.6), 0 0 60px rgba(255, 105, 135, 0.4)' }}>
             {"Quang Huy".split('').map((char, index) => (
               <span
                 key={index}
