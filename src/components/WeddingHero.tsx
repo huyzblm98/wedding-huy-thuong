@@ -25,7 +25,7 @@ const WeddingHero = () => {
     
     // Play music on user interaction
     const playMusic = () => {
-      if (audioRef.current) {
+      if (audioRef.current && audioRef.current.paused) {
         audioRef.current.play().catch(err => console.log("Auto-play prevented:", err));
       }
     };
