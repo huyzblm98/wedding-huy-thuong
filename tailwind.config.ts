@@ -16,7 +16,6 @@ export default {
       fontFamily: {
         'playfair': ['Playfair Display', 'serif'],
         'script': ['Great Vibes', 'cursive'],
-        'msmadi': ['Ms Madi', 'cursive'],
       },
       colors: {
         border: "hsl(var(--border))",
