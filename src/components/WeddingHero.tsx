@@ -78,7 +78,7 @@ const WeddingHero = () => {
       ></div>
       
       {/* Overlay to soften the background */}
-      {/* <div className="absolute inset-0 bg-gradient-to-br from-wedding-blue/40 via-background/50 to-wedding-rose-light/40"></div> */}
+      <div className="absolute inset-0 bg-gradient-to-br from-wedding-blue/80 via-background/90 to-wedding-rose-light/80"></div>
 
       {/* Main Content */}
       <div className={`relative z-10 text-center px-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -142,12 +142,12 @@ const WeddingHero = () => {
 </div>
 
         {/* Decorative elements */}
-        {/* <div className="mt-12 flex justify-center gap-2 animate-fade-in" style={{ animationDelay: '0.9s'}}> */}
-          {/* <div className="w-2 h-2 rounded-full bg-wedding-rose"></div> */}
-          {/* <div className="w-2 h-2 rounded-full bg-wedding-rose"></div> */}
-          {/* <div className="w-2 h-2 rounded-full bg-wedding-rose"></div> */}
-        {/* </div> */}
-      {/* </div> */}
+        <div className="mt-12 flex justify-center gap-2 animate-fade-in" style={{ animationDelay: '0.9s', color: '#CC0033' }}>
+          <div className="w-2 h-2 rounded-full bg-wedding-rose"></div>
+          <div className="w-2 h-2 rounded-full bg-wedding-rose"></div>
+          <div className="w-2 h-2 rounded-full bg-wedding-rose"></div>
+        </div>
+      </div>
 
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-5 pointer-events-none">
