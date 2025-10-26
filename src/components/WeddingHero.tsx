@@ -142,12 +142,12 @@ const WeddingHero = () => {
 </div>
 
         {/* Decorative elements */}
-        {/*<div className="mt-12 flex justify-center gap-2 animate-fade-in" style={{ animationDelay: '0.9s'}}>
-          <div className="w-2 h-2 rounded-full bg-wedding-rose"></div>
-          <div className="w-2 h-2 rounded-full bg-wedding-rose"></div>
-          <div className="w-2 h-2 rounded-full bg-wedding-rose"></div>
-        </div>
-      </div> */}
+        {/* <div className="mt-12 flex justify-center gap-2 animate-fade-in" style={{ animationDelay: '0.9s'}}> */}
+          {/* <div className="w-2 h-2 rounded-full bg-wedding-rose"></div> */}
+          {/* <div className="w-2 h-2 rounded-full bg-wedding-rose"></div> */}
+          {/* <div className="w-2 h-2 rounded-full bg-wedding-rose"></div> */}
+        {/* </div>
+      {/* </div> */}
 
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-5 pointer-events-none">
