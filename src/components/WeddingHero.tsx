@@ -82,7 +82,7 @@ const WeddingHero = () => {
 
       {/* Main Content */}
       <div className={`relative z-10 text-center px-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl tracking-[0.2em] sm:tracking-[0.3em] text-wedding-text mb-8 sm:mb-12 animate-fade-in px-4">
+        <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl tracking-[0.2em] sm:tracking-[0.3em] text-wedding-text mb-8 sm:mb-12 animate-fade-in px-4 mt-[20px]">
           LỄ DẠM NGÕ
         </h2>
 
