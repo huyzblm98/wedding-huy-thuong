@@ -87,7 +87,7 @@ const WeddingHero = () => {
         </h2>
 
         <div className="mb-6 animate-fade-in max-w-4xl mx-auto px-4" style={{ marginTop: '15%', animationDelay: '0.3s' }}>
-          <h1 className="font-script text-6xl sm:text-8xl md:text-[9rem] lg:text-[10rem] mb-2 -translate-x-[15%] sm:-translate-x-[25%] md:-translate-x-[40%] lg:-translate-x-[50%]" style={{ color: '#990000'}}>
+          <h1 className="font-script text-6xl sm:text-8xl md:text-[9rem] lg:text-[10rem] mb-2 -translate-x-[15%] sm:-translate-x-[25%] md:-translate-x-[40%] lg:-translate-x-[50%]" style={{ color: '#990033'}}>
             Hoài Thương
           </h1>
           <div className="flex items-center justify-center gap-4 my-4">
@@ -95,7 +95,7 @@ const WeddingHero = () => {
             <span className="font-playfair text-2xl sm:text-3xl md:text-4xl text-wedding-text">&</span>
             <div className="h-px w-12 sm:w-20 bg-wedding-accent"></div>
           </div>
-          <h1 className="font-script text-6xl sm:text-8xl md:text-[9rem] lg:text-[10rem] translate-x-[15%] sm:translate-x-[25%] md:translate-x-[40%] lg:translate-x-[50%]" style={{ color: '#990000'}}>
+          <h1 className="font-script text-6xl sm:text-8xl md:text-[9rem] lg:text-[10rem] translate-x-[15%] sm:translate-x-[25%] md:translate-x-[40%] lg:translate-x-[50%]" style={{ color: '#990033'}}>
             Quang Huy
           </h1>
         </div>
@@ -120,7 +120,7 @@ const WeddingHero = () => {
             THỨ BẢY
           </p>
         </div>
-        <p className="font-playfair text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-wedding-rose leading-none">
+        <p className="font-playfair text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-wedding-rose leading-none" style={{ color: '#990033'}}>
           01
         </p>
         <div className="text-center">
