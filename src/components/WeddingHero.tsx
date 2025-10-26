@@ -146,7 +146,7 @@ const WeddingHero = () => {
           {/* <div className="w-2 h-2 rounded-full bg-wedding-rose"></div> */}
           {/* <div className="w-2 h-2 rounded-full bg-wedding-rose"></div> */}
           {/* <div className="w-2 h-2 rounded-full bg-wedding-rose"></div> */}
-        {/* </div>
+        {/* </div> */}
       {/* </div> */}
 
       {/* Subtle background pattern */}
