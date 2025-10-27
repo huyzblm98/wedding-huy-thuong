@@ -12,19 +12,19 @@ const WeddingHero = () => {
     setIsVisible(true);
 
     // Liên tục tạo tim bay lên
-    const addHeart = () => {
-      setHearts((prev) => [
-        ...prev,
-        {
-          id: Date.now(),
-          left: Math.random() * 100,
-          size: 20 + Math.random() * 25,
-          duration: 5 + Math.random() * 4,
-        },
-      ]);
-    };
+    // const addHeart = () => {
+    //   setHearts((prev) => [
+    //     ...prev,
+    //     {
+    //       id: Date.now(),
+    //       left: Math.random() * 100,
+    //       size: 20 + Math.random() * 25,
+    //       duration: 5 + Math.random() * 4,
+    //     },
+    //   ]);
+    // };
 
-    const heartInterval = setInterval(addHeart, 400); // tạo tim mới mỗi 0.4s
+    // const heartInterval = setInterval(addHeart, 400); // tạo tim mới mỗi 0.4s
 
     // Play nhạc
     const playMusic = () => {
