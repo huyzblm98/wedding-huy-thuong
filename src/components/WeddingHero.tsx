@@ -53,7 +53,7 @@ const WeddingHero = () => {
       {hearts.map((heart) => (
         <div
           key={heart.id}
-          className="absolute pointer-events-none animate-rise font-black"
+          className="absolute pointer-events-none animate-rise font-black z-10"
           style={{
             left: `${heart.left}%`,
             bottom: "-50px",
@@ -71,7 +71,7 @@ const WeddingHero = () => {
 
       {/* Background Image */}
       <div
-        className="absolute inset-0 animate-float opacity-100"
+        className="absolute inset-0 animate-float opacity-100 z-0"
         style={{
           backgroundImage: `url(${backgroundDamngo})`,
           backgroundSize: "cover",
@@ -82,7 +82,7 @@ const WeddingHero = () => {
 
       {/* Main Content */}
       <div
-        className={`relative z-10 text-center px-6 transition-all duration-1000 ${
+        className={`relative z-20 text-center px-6 transition-all duration-1000 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
