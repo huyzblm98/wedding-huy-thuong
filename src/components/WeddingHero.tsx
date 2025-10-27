@@ -165,7 +165,7 @@ const WeddingHero = () => {
         autoPlay
         preload="auto"
       >
-        <source src="/em-dong-y.mp3" type="audio/mpeg" />
+        <source src="/wedding_mucsic.mp3" type="audio/mpeg" />
       </audio>
     </div>
   );
