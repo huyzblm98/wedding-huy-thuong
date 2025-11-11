@@ -14,7 +14,7 @@ export const CoupleInfo: CoupleModel = {
       "Là một chàng trai hiền lành, chu đáo và đam mê nấu ăn. Sự quan tâm chân thành của anh dành cho mọi người khiến anh luôn được yêu quý và trân trọng.",
     address: "Thôn Cuối, Xã Vĩnh Hưng, Tỉnh Phú Thọ",
     mapAddress:
-      "https://www.google.com/maps/dir//21.2873056,105.5001389/@21.0961213,105.3095159,125372m/data=!3m1!1e3!4m2!4m1!3e0?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D",
+      "https://www.google.com/maps?q=21.287305614321852,105.50013885140255&z=14&t=m&mapclient=embed",
     bankQrCode: {
       src: "/images/qrCodes/HuyMBBank.jpg",
       with: 500,

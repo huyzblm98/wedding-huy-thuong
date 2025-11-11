@@ -2,8 +2,6 @@ import Image from "next/image";
 import { CoupleModel } from "@/types/couple";
 import { WeddingModel } from "@/types/wedding";
 import { getDay, getMonth, getYear } from "@/utils/date";
-import { CSSProperties, useState } from "react";
-import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 import { TypeAnimation } from "react-type-animation";
 
 interface HeroProps {
@@ -28,9 +26,20 @@ export function HeroSection({
       <div
         ref={scrollUpRef}
         id="home"
-        className="relative bg-gradient-to-r from-purple-600 to-blue-600 h-screen text-white overflow-hidden"
+        className="relative h-screen text-white overflow-hidden"
       >
-        <Slider></Slider>
+        {/* Ảnh nền cố định - luôn xuất phát từ đầu */}
+        <div className="absolute inset-0 w-full h-full">
+          <Image
+            src="/images/sliders/1.jpg"
+            alt="Background"
+            className="w-full h-full object-cover object-top" // Đổi từ object-center thành object-top
+            fill
+            sizes="100vw"
+            priority
+          />
+          <div className="absolute inset-0 bg-black opacity-40"></div>
+        </div>
 
         <div className="container mx-auto relative z-10 flex flex-col justify-between items-center h-full text-center p-2 py-10">
           <div className="flex-1 flex flex-col justify-center items-center">
@@ -129,97 +138,6 @@ export function HeroSection({
             </div>
           </div>
         </div>
-      </div>
-    </>
-  );
-}
-
-function Slider() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [sliders] = useState<number[]>(
-    Array.from({ length: 3 }).map((_, i) => i + 1)
-  );
-  const prev = () => {
-    setCurIndex(currentIndex - 1);
-  };
-
-  const next = () => {
-    setCurIndex(currentIndex + 1);
-  };
-
-  const setCurIndex = (index: number) => {
-    if (index < 0) {
-      index = sliders.length - 1;
-    }
-    if (index > sliders.length - 1) {
-      index = 0;
-    }
-
-    setCurrentIndex(index);
-  };
-
-  const changeIndex = (index: number) => {
-    setCurrentIndex(index);
-  };
-
-  return (
-    <>
-      <div className="absolute inset-0 w-full slider-wrapper">
-        <div
-          className={
-            "flex transition-transform duration-700 ease-in-out transform"
-          }
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-        >
-          {sliders.map((_, i) => (
-            <div
-              className="w-full transition-transform duration-700 ease-in-out transform flex-shrink-0 p-0 h-screen slider__image"
-              key={i}
-            >
-              <Image
-                src={`/images/sliders/${i + 1}.jpg`}
-                alt={`Slide ${i + 1}`}
-                className="w-full h-full object-cover object-center" // Luôn căn giữa
-                width={2200}
-                height={2200}
-                priority={i === 0} // Tối ưu tải ảnh đầu tiên
-              />
-            </div>
-          ))}
-        </div>
-        <div className="absolute inset-0 bg-black opacity-40"></div>
-
-        {/* Navigation buttons */}
-        <div className="move max-sm:w-28 max-sm:absolute max-sm:bottom-20 max-sm:-right-5 max-sm:rotate-90">
-          <button
-            onClick={prev}
-            className="z-30 absolute top-1/2 left-4 transform -translate-y-1/2 cursor-pointer bg-black bg-opacity-30 p-2 rounded-full hover:bg-opacity-50 transition-all"
-          >
-            <ArrowLeftIcon className="w-7 h-7 cursor-pointer text-white"></ArrowLeftIcon>
-          </button>
-          <button
-            onClick={next}
-            className="z-30 absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer bg-black bg-opacity-30 p-2 rounded-full hover:bg-opacity-50 transition-all"
-          >
-            <ArrowRightIcon className="w-7 h-7 cursor-pointer text-white"></ArrowRightIcon>
-          </button>
-        </div>
-      </div>
-
-      {/* Dots indicator */}
-      <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2 z-30">
-        {sliders.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => changeIndex(i)}
-            className={
-              "cursor-pointer w-3 h-3 rounded-full transition-all duration-300 " +
-              (i === currentIndex
-                ? "bg-pink-500 scale-125"
-                : "bg-white bg-opacity-70 hover:bg-opacity-100")
-            }
-          ></button>
-        ))}
       </div>
     </>
   );
