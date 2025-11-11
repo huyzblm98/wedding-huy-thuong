@@ -169,51 +169,56 @@ function Slider() {
           className={
             "flex transition-transform duration-700 ease-in-out transform"
           }
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {sliders.map((_, i) => (
             <div
-              className="w-full  transition-transform duration-700 ease-in-out transform flex-shrink-0 p-0 h-screen slider__image"
-              style={{ "--translateX": currentIndex } as CSSProperties}
+              className="w-full transition-transform duration-700 ease-in-out transform flex-shrink-0 p-0 h-screen slider__image"
               key={i}
             >
               <Image
                 src={`/images/sliders/${i + 1}.jpg`}
-                alt="Slide 1"
-                className="w-full h-full object-cover object-[80%_0%] lg:object-[0%_10%]"
+                alt={`Slide ${i + 1}`}
+                className="w-full h-full object-cover object-center" // Luôn căn giữa
                 width={2200}
                 height={2200}
+                priority={i === 0} // Tối ưu tải ảnh đầu tiên
               />
             </div>
           ))}
         </div>
         <div className="absolute inset-0 bg-black opacity-40"></div>
 
+        {/* Navigation buttons */}
         <div className="move max-sm:w-28 max-sm:absolute max-sm:bottom-20 max-sm:-right-5 max-sm:rotate-90">
           <button
             onClick={prev}
-            className="z-30 absolute top-1/2 left-4 transform -translate-y-1/2 cursor-pointer bg-transparent p-2 rounded-full hover:border"
+            className="z-30 absolute top-1/2 left-4 transform -translate-y-1/2 cursor-pointer bg-black bg-opacity-30 p-2 rounded-full hover:bg-opacity-50 transition-all"
           >
-            <ArrowLeftIcon className="w-7 h-7 cursor-pointer"></ArrowLeftIcon>
+            <ArrowLeftIcon className="w-7 h-7 cursor-pointer text-white"></ArrowLeftIcon>
           </button>
           <button
             onClick={next}
-            className="z-30 absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer bg-transparent p-2 rounded-full hover:border"
+            className="z-30 absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer bg-black bg-opacity-30 p-2 rounded-full hover:bg-opacity-50 transition-all"
           >
-            <ArrowRightIcon className="w-7 h-7 cursor-pointer"></ArrowRightIcon>
+            <ArrowRightIcon className="w-7 h-7 cursor-pointer text-white"></ArrowRightIcon>
           </button>
         </div>
       </div>
 
-      <div className="absolute dot bottom-5 right-5 flex space-x-2 z-30 ">
+      {/* Dots indicator */}
+      <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2 z-30">
         {sliders.map((_, i) => (
-          <div
+          <button
             key={i}
             onClick={() => changeIndex(i)}
             className={
-              "cursor-pointer w-3 h-3 rounded-full " +
-              (i === currentIndex ? "bg-pink-500" : "bg-white")
+              "cursor-pointer w-3 h-3 rounded-full transition-all duration-300 " +
+              (i === currentIndex
+                ? "bg-pink-500 scale-125"
+                : "bg-white bg-opacity-70 hover:bg-opacity-100")
             }
-          ></div>
+          ></button>
         ))}
       </div>
     </>
