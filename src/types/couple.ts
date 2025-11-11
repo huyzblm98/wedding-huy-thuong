@@ -1,14 +1,18 @@
-import {ImageModel} from "@/types/Image";
+import { ImageModel } from "@/types/Image";
 
 export interface CoupleModel {
-    male: PersonModel;
-    female: PersonModel;
+  male: PersonModel;
+  female: PersonModel;
 }
 
 export interface PersonModel {
-    fullName: string;
-    description?: string;
-    avatar: ImageModel;
-    address?: string;
-    mapAddress?: string;
+  fullName: string;
+  description?: string;
+  avatar: ImageModel;
+  address?: string;
+  mapAddress?: string;
+  bankQrCode: ImageModel;
+  bankName?: string;
+  bankAccountNumber?: string;
+  bankOwnerName?: string;
 }

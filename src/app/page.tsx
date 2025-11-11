@@ -15,31 +15,43 @@ import { SendWish } from "@/components/common/SendWish";
 import { Thanks } from "@/components/common/Thanks";
 import { FixedIcon } from "@/components/common/FixedIcon";
 import AOS from "aos";
-import "aos/dist/aos.css";
 import { useWishesListener } from "@/lib/useWishesListener";
 import { ToastContainer } from "react-toastify";
+import { BankingModal } from "@/components/common/BankingModal";
+
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [coupleInfo] = useState(CoupleInfo);
   const [weddingInfo] = useState(WeddingInfo);
+  const [showBanking, setShowBanking] = useState(false);
   const scrollUpRef = useRef() as any;
   const scrollDownRef = useRef() as any;
+  const confirmJoinRef = useRef() as any;
   const wishes = useWishesListener();
+
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
     }, 2000);
     AOS.init();
-    // {
-    //   duration: 800,
-    //   once: false, // chỉ chạy 1 lần
-    // }
   }, []);
+
   const goScrollDown = () => {
     if (scrollDownRef.current) {
       scrollDownRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  const handleConfirmJoinClick = () => {
+    if (confirmJoinRef.current) {
+      confirmJoinRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleBankingClick = () => {
+    setShowBanking(true);
+  };
+
   return (
     <>
       <ToastContainer
@@ -62,6 +74,8 @@ export default function Home() {
           weddingInfo={weddingInfo}
           scrollUpRef={scrollUpRef}
           onScrollDownClick={goScrollDown}
+          onConfirmJoinClick={handleConfirmJoinClick}
+          onBankingClick={handleBankingClick}
         />
 
         {!isLoading && (
@@ -71,14 +85,24 @@ export default function Home() {
               weddingInfo={weddingInfo}
               scrollDownRef={scrollDownRef}
             />
-            <WeddingEvent />
-            {/* <WebsiteInfo /> */}
+            {/* <WeddingEvent /> */}
+            {<WebsiteInfo />}
             <OurStory />
-            <ConfirmJoin />
             <Gallery />
-            <SendWish wishes={wishes}></SendWish>
+            {/* <SendWish wishes={wishes}></SendWish> */}
+            <div ref={confirmJoinRef}>
+              <ConfirmJoin />
+            </div>
             <Thanks />
           </>
+        )}
+
+        {/* Modal Banking */}
+        {showBanking && (
+          <BankingModal
+            coupleInfo={coupleInfo}
+            onClose={() => setShowBanking(false)}
+          />
         )}
       </div>
       {!isLoading && <FixedIcon />}

@@ -22,9 +22,9 @@ export const dayOfWeek = (date: string): string => {
 export const fullDateVN = (date: string): string => {
   const dates = [
     dayOfWeek(date),
-    "Ngày " + getDay(date),
-    "Tháng " + getMonth(date),
-    "Năm " + getYear(date),
+    "NGÀY " + getDay(date),
+    "THÁNG " + getMonth(date),
+    "NĂM " + getYear(date),
   ];
   return dates.join(", ");
 };

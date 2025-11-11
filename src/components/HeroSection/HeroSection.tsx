@@ -11,6 +11,8 @@ interface HeroProps {
   weddingInfo: WeddingModel;
   scrollUpRef: any;
   onScrollDownClick: Function | any;
+  onConfirmJoinClick: Function | any;
+  onBankingClick: Function | any;
 }
 
 export function HeroSection({
@@ -18,6 +20,8 @@ export function HeroSection({
   weddingInfo,
   scrollUpRef,
   onScrollDownClick,
+  onConfirmJoinClick,
+  onBankingClick,
 }: HeroProps) {
   return (
     <>
@@ -28,97 +32,101 @@ export function HeroSection({
       >
         <Slider></Slider>
 
-        <div className="container mx-auto relative z-10 flex flex-col justify-center items-center h-full text-center p-2">
-          <div className={"mb-10 flex items-center space-x-2 text-5xl"}>
-            <div
-              className="font-bold leading-tight mb-4 w-28 sm:w-auto"
-              data-aos="fade-right"
-              data-aos-delay="3000"
-              data-aos-duration="3000"
-            >
-              {coupleInfo.male.fullName}
-            </div>
-            <div
-              className="font-bold leading-tight mb-4"
-              data-aos="zoom-in-down"
-              data-aos-delay="3000"
-              data-aos-duration="3000"
-            >
-              &
-            </div>
-            <div
-              className="font-bold leading-tight mb-4 w-28 sm:w-auto font-[Dancing_Script]"
-              data-aos="fade-left"
-              data-aos-delay="3000"
-              data-aos-duration="3000"
-            >
-              {coupleInfo.female.fullName}
-            </div>
-          </div>
-          <div className="text-base w-[340px] lg:w-[450px] min-h-[60px] sm:text-lg md:text-2xl text-gray-300 mb-12 sm:mb-20 tracking-[5px] border-t-2 border-b-2 py-3 px-5 ">
-            {/* <p className="typing-animation typing-animation_delay-4s">
-              WE&#39;RE GETTING MARRIED
-            </p> */}
-            <TypeAnimation
-              sequence={[
-                4000, // ⏳ Delay 4 giây
-                "WE'RE GETTING MARRIED", // ✍️ Gõ dòng chữ
-              ]}
-              wrapper="p"
-              speed={60} // tốc độ gõ
-              //repeat={Infinity} // lặp vô hạn
-              //className="typing-animation"
-            />
-          </div>
-          <div className="relative flex space-x-5 sm:space-x-10 lg:space-x-20 font-serif ">
-            <div className="flex">
-              <div className="relative animate__animated animate__pulse animate__infinite">
-                <div className="heart bg-opacity-40 transform scale-100 sm:scale-[1.3] lg:scale-[1.4]"></div>
-                <div className="absolute w-full h-full -top-2.5 left-0 flex flex-col justify-center items-center">
-                  <p className="text-sm sm:text-base text-white font-semibold font-[Dancing_Script]">
-                    Ngày
-                  </p>
-                  <p className="text-xl sm:text-3xl text-white font-bold font-[Dancing_Script]">
-                    {getDay(weddingInfo.weddingDate)}
-                  </p>
-                </div>
+        <div className="container mx-auto relative z-10 flex flex-col justify-between items-center h-full text-center p-2 py-10">
+          <div className="flex-1 flex flex-col justify-center items-center">
+            <div className={"mb-10 flex items-center space-x-2 text-5xl"}>
+              <div
+                className="font-bold leading-tight mb-4 w-28 sm:w-auto"
+                data-aos="fade-right"
+                data-aos-delay="3000"
+                data-aos-duration="3000"
+              >
+                {coupleInfo.male.fullName}
+              </div>
+              <div
+                className="font-bold leading-tight mb-4"
+                data-aos="zoom-in-down"
+                data-aos-delay="3000"
+                data-aos-duration="3000"
+              >
+                &
+              </div>
+              <div
+                className="font-bold leading-tight mb-4 w-28 sm:w-auto font-[Dancing_Script]"
+                data-aos="fade-left"
+                data-aos-delay="3000"
+                data-aos-duration="3000"
+              >
+                {coupleInfo.female.fullName}
               </div>
             </div>
+            <div className="text-base w-[340px] lg:w-[450px] min-h-[60px] sm:text-lg md:text-2xl text-gray-300 mb-12 sm:mb-20 tracking-[5px] border-t-2 border-b-2 py-3 px-5 ">
+              <TypeAnimation
+                sequence={[4000, "WE'RE GETTING MARRIED"]}
+                wrapper="p"
+                speed={60}
+              />
+            </div>
+            <div className="relative flex space-x-5 sm:space-x-10 lg:space-x-20 font-serif ">
+              <div className="flex">
+                <div className="relative animate__animated animate__pulse animate__infinite">
+                  <div className="heart bg-opacity-40 transform scale-100 sm:scale-[1.3] lg:scale-[1.4]"></div>
+                  <div className="absolute w-full h-full -top-2.5 left-0 flex flex-col justify-center items-center">
+                    <p className="text-sm sm:text-base text-white font-semibold font-[Dancing_Script]">
+                      Ngày
+                    </p>
+                    <p className="text-xl sm:text-3xl text-white font-bold font-[Dancing_Script]">
+                      {getDay(weddingInfo.weddingDate)}
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-            <div className="flex animate__animated animate__jackInTheBox animate__delay-4s">
-              <div className="relative animate__animated animate__pulse animate__infinite">
-                <div className="heart bg-opacity-40 transform scale-100 sm:scale-[1.3] lg:scale-[1.4]"></div>
-                <div className="absolute w-full h-full -top-2.5 left-0 flex flex-col justify-center items-center">
-                  <p className="text-sm sm:text-base text-white font-semibold font-[Dancing_Script]">
-                    Tháng
-                  </p>
-                  <p className="text-xl sm:text-3xl text-white font-bold font-[Dancing_Script]">
-                    {getMonth(weddingInfo.weddingDate)}
-                  </p>
+              <div className="flex animate__animated animate__jackInTheBox animate__delay-4s">
+                <div className="relative animate__animated animate__pulse animate__infinite">
+                  <div className="heart bg-opacity-40 transform scale-100 sm:scale-[1.3] lg:scale-[1.4]"></div>
+                  <div className="absolute w-full h-full -top-2.5 left-0 flex flex-col justify-center items-center">
+                    <p className="text-sm sm:text-base text-white font-semibold font-[Dancing_Script]">
+                      Tháng
+                    </p>
+                    <p className="text-xl sm:text-3xl text-white font-bold font-[Dancing_Script]">
+                      {getMonth(weddingInfo.weddingDate)}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="flex animate__animated animate__jackInTheBox animate__delay-5s">
-              <div className="relative animate__animated animate__pulse animate__infinite">
-                <div className="heart bg-opacity-40 transform scale-100 sm:scale-[1.3] lg:scale-[1.4]"></div>
-                <div className="absolute w-full h-full -top-2.5 left-0 flex flex-col justify-center items-center">
-                  <p className="text-sm sm:text-base text-white font-semibold font-[Dancing_Script]">
-                    Năm
-                  </p>
-                  <p className="text-xl sm:text-3xl text-white font-bold font-[Dancing_Script]">
-                    {getYear(weddingInfo.weddingDate)}
-                  </p>
+              <div className="flex animate__animated animate__jackInTheBox animate__delay-5s">
+                <div className="relative animate__animated animate__pulse animate__infinite">
+                  <div className="heart bg-opacity-40 transform scale-100 sm:scale-[1.3] lg:scale-[1.4]"></div>
+                  <div className="absolute w-full h-full -top-2.5 left-0 flex flex-col justify-center items-center">
+                    <p className="text-sm sm:text-base text-white font-semibold font-[Dancing_Script]">
+                      Năm
+                    </p>
+                    <p className="text-xl sm:text-3xl text-white font-bold font-[Dancing_Script]">
+                      {getYear(weddingInfo.weddingDate)}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          className="absolute cursor-pointer bottom-5 right-[45%] lg:right-1/2 z-20 flex flex-col justify-center p-3 rounded-full items-center text-center border-2 h-14 "
-          onClick={onScrollDownClick}
-        >
-          <div className="relative top-3 text-2xl font-bold animate__animated animate__slideInDown animate__infinite">
-            .
+
+          {/* Buttons ở cuối màn hình */}
+          <div className="w-full max-w-md px-4 mb-8">
+            <div className="flex flex-row gap-4">
+              <button
+                onClick={onConfirmJoinClick}
+                className="uppercase flex-1 hover:bg-gray-100 py-3 bg-white text-black rounded-full transition-all duration-300 hover:scale-105 text-sm sm:text-base font-medium border border-gray-300 shadow-sm"
+              >
+                Xác nhận tham dự
+              </button>
+              <button
+                onClick={onBankingClick}
+                className="uppercase flex-1 hover:bg-gray-100 py-3 bg-white text-black rounded-full transition-all duration-300 hover:scale-105 text-sm sm:text-base font-medium border border-gray-300 shadow-sm"
+              >
+                Mừng cưới
+              </button>
+            </div>
           </div>
         </div>
       </div>

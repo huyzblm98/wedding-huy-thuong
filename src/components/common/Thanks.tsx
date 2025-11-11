@@ -15,10 +15,15 @@ export function Thanks() {
         </div>
         <div
           className={
-            "absolute text-6xl md:text-8xl lg:text-8xl  2xl:text-9xl top-[10%] font-semibold  italic font-[Dancing_Script]"
+            "absolute top-[70%] -translate-y-1/2 text-center font-[Dancing_Script]"
           }
         >
-          Thank You!
+          <p className="text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl font-bold italic text-[#E91E63]">
+            Thank You!
+          </p>
+          <p className="text-3xl md:text-4xl lg:text-4xl 2xl:text-5xl font-semibold italic mt-2 text-[#E91E63]">
+            -Quang Huy & Hoài Thương-
+          </p>
         </div>
       </div>
     </>

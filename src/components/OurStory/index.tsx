@@ -3,13 +3,17 @@ import Image from "next/image";
 import { useState } from "react";
 import { OurStoryInfos } from "@/data/websiteDataInfo";
 import { OurStoryModel } from "@/types/ourStory";
-
+import { CoupleModel } from "@/types/couple";
 import { SectionTitle } from "@/components/shareds/SectionTitle";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 import { getDay, getMonth, getYear } from "@/utils/date";
 import { TypeAnimation } from "react-type-animation";
 
-export function OurStory() {
+interface OurStoryProps {
+  coupleInfo?: CoupleModel; // Thêm prop coupleInfo
+}
+
+export function OurStory({ coupleInfo }: OurStoryProps) {
   const [stories] = useState(OurStoryInfos as OurStoryModel[]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [imageClassAnimated, setImageClassAnimated] = useState<string>("");
@@ -62,6 +66,7 @@ export function OurStory() {
                           width={100}
                           height={100}
                           alt="image"
+                          priority={i === 0} // Thêm priority cho ảnh đầu tiên
                         ></Image>
                       </div>
                     </div>
@@ -78,13 +83,17 @@ export function OurStory() {
                 >
                   <Image
                     className={
-                      "object-cover object-center w-full h-full  lg:rounded-full transition-all duration-700 ease-linear " +
+                      "object-cover object-top w-full h-full lg:rounded-full transition-all duration-700 ease-linear " + // Đổi object-center thành object-top
                       imageClassAnimated
                     }
                     src={stories[currentIndex].image.src}
                     width={stories[currentIndex].image.with}
                     height={stories[currentIndex].image.height}
                     alt="image"
+                    priority={currentIndex === 0} // Thêm priority cho ảnh hiện tại
+                    quality={85} // Tăng chất lượng ảnh
+                    placeholder="blur" // Thêm blur placeholder
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R" // Blur placeholder base64
                   />
 
                   <div className="absolute z-20 bottom-0 left-0 md:left-5 lg:bottom-0 lg:left-10">
@@ -95,6 +104,7 @@ export function OurStory() {
                         width={100}
                         height={100}
                         alt="Love"
+                        priority
                       ></Image>
                       <Image
                         className="size-10 lg:size-16 relative lg:top-10 lg:right-10"
@@ -102,6 +112,7 @@ export function OurStory() {
                         width={100}
                         height={100}
                         alt="Love"
+                        priority
                       ></Image>
                       <Image
                         className="size-10 lg:size-20 relative lg:top-20 lg:right-4"
@@ -109,17 +120,7 @@ export function OurStory() {
                         width={100}
                         height={100}
                         alt="Love"
-                      ></Image>
-                    </div>
-                  </div>
-                  <div className="absolute z-20 -top-[4%] -right-[4%] lg:top-0 lg:right-10">
-                    <div className="flex relative">
-                      <Image
-                        className="scale-50 lg:scale-125"
-                        src="/icons/rose-4.png"
-                        width={100}
-                        height={100}
-                        alt="Love"
+                        priority
                       ></Image>
                     </div>
                   </div>
@@ -163,7 +164,6 @@ export function OurStory() {
                   )}
 
                   <div
-                    //className="text-xl font-[Dancing_Script] leading-8 text-justify"
                     data-aos="zoom-in-up"
                     data-aos-easing="linear"
                     data-aos-duration="1500"

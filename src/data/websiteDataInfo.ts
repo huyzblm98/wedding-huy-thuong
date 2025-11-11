@@ -15,6 +15,14 @@ export const CoupleInfo: CoupleModel = {
     address: "Thôn Cuối, Xã Vĩnh Hưng, Tỉnh Phú Thọ",
     mapAddress:
       "https://www.google.com/maps/dir//21.2873056,105.5001389/@21.0961213,105.3095159,125372m/data=!3m1!1e3!4m2!4m1!3e0?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D",
+    bankQrCode: {
+      src: "/images/qrCodes/HuyMBBank.jpg",
+      with: 500,
+      height: 500,
+    },
+    bankName: "MB Bank",
+    bankAccountNumber: "0976831354",
+    bankOwnerName: "Bùi Quang Huy",
   },
   female: {
     fullName: "Hoài Thương",
@@ -28,52 +36,60 @@ export const CoupleInfo: CoupleModel = {
     address: "Tổ dân phố 3, Xã Đức Thọ, Tỉnh Hà Tĩnh",
     mapAddress:
       "https://www.google.com/maps?q=18.54131507873535,105.58305358886719&z=14&t=m&mapclient=embed",
+    bankQrCode: {
+      src: "/images/qrCodes/ThuongBIDVBank.jpg",
+      with: 500,
+      height: 500,
+    },
+    bankName: "BIDV",
+    bankAccountNumber: "1590320731",
+    bankOwnerName: "Hoàng Thị Hoài Thương",
   },
 };
 
 export const WeddingInfo: WeddingModel = {
-  weddingDate: "2025/11/10",
+  weddingDate: "2025/11/28",
 };
 
 export const OurStoryInfos: OurStoryModel[] = [
   {
-    date: "2025/11/10",
-    caption: "",
+    date: "2025/11/28",
+    caption: "Ngày đẹp nhất cuộc đời",
     image: {
       src: "/images/stories/4.jpg",
       with: 1000,
       height: 1000,
     },
     content:
-      "Sau bao nhiêu ngày chờ đợi, tình yêu của chúng ta đơm hoa kết trái bằng một lễ cưới ấm áp và ngọt ngào. Ngày hôm nay, em sẽ chính thức là cô dâu của anh và sau này là mẹ của các con anh. Cảm ơn vì mình luôn là một phần trong cuộc sống của nhau. Anh mong sau này dù tương lai có như thế nào thì chúng ta luôn nhớ rằng “tình yêu không phải là nhìn chằm chằm vào nhau, mà là cùng nhau nhìn về một hướng”.",
+      "“Yêu rồi xa rồi lại yêu” — hành trình dài 7 năm của anh và em. Từ những ngày đại học, rồi những lần em đi xa, anh vẫn ở lại, chờ đợi. Dù có chia ly, tình yêu vẫn tìm được đường quay về. Và rồi, ngày đẹp nhất cũng đến — lần đầu hai đứa dắt nhau ra mắt hai bên gia đình, sau bao lần gặp gỡ, cuối cùng cũng được đồng ý để cùng nắm tay đi hết quãng đời còn lại.",
   },
   {
-    date: "2024/05/01",
-    caption: "",
+    date: "2022/12/01",
+    caption: "Yêu rồi xa rồi lại yêu",
     image: {
-      src: "/images/stories/3.jpg",
+      src: "/images/stories/7.jpg",
       with: 1000,
       height: 1000,
     },
     content:
-      "Anh cầu hôn em sau khi chúng ta đã công khai tình yêu của chúng mình tới gia đình và bạn bè. Cảm giác hạnh phúc vỡ òa khi em nói lời đồng ý. Chúng ta thật hạnh phúc và may mắn vì hai bên gia đình và bạn bè thân thiết đều ủng hộ và gửi lời chúc mừng tới hai đứa. Hai đứa bắt đầu ấp ủ ý tưởng và những kế hoạch chuẩn bị về một hôn lễ giản dị, ấm áp và ngọt ngào.",
+      "Ba năm thanh xuân bên nhau. Rồi em ra trường, chọn đi du học, mình chia tay trong lặng lẽ. Một năm sau, em về, anh vẫn ở đó, và ta lại yêu. Nhưng rồi em lại đi, không chỉ một mà hai lần nữa. Dù khoảng cách dài thêm, anh vẫn chờ — vì tim anh chưa từng ngừng hướng về em.",
   },
   {
-    date: "2024/03/31",
-    caption: "",
+    date: "2017/10/02",
+    caption: "Ngỏ lười yêu",
     image: {
       src: "/images/stories/2.jpg",
       with: 1000,
       height: 1000,
     },
     content:
-      "Buổi hẹn hò đầu tiên của chúng ta tại quán Nhà gỗ café. Khi anh đến thì đã thấy một cô gái xinh xắn, nhỏ nhắn ngồi bên góc bàn cạnh cửa sổ, chúng ta có những giây phút chuyện trò ban đầu thật ngại ngùng. Mãi sau này khi chúng ta chính thức yêu nhau, em hay đùa rằng “buổi hẹn đầu tiên thấy anh cũng ít nói, nhưng em quay sang thấy anh đẹp trai nên lại tiếp tục cố gắng gợi chuyện”. Anh không nghĩ rằng nhan sắc bình thường của anh cũng là một thứ vũ khí lợi hại đến thế😊. Và anh cũng hiểu ra rằng, tình yêu thực sự phải bắt đầu từ sự cố gắng của cả hai phía.",
+      "Ngày anh lấy hết can đảm nói với em: “Tao không muốn làm bạn mày nữa.” Câu nói tưởng chừng đơn giản mà chứa hết bao cảm xúc sau hơn 3 tháng theo đuổi. Rồi đến 05/10/2017, em mỉm cười gật đầu — khoảnh khắc anh biết rằng mình đã thực sự có em.",
   },
   {
-    date: "2024/02/16",
-    caption: "",
+    date: "2017/07/17",
+    caption: "Lời tán tỉnh đầu tiên",
     image: {
-      src: "/images/stories/1.jpg",
+      src: "/images/stories/5.jpg",
       with: 1000,
       height: 1000,
     },
@@ -102,10 +118,12 @@ export const Metadata = {
 
 export const WeddingEventInfos = [
   {
-    title: "LỄ CƯỚI NHÀ GÁI",
-    date: "2024/11/09",
-    time: "16:30",
-    address: `Tại gia đình nhà gái - ${CoupleInfo.female.address}`,
+    title: "TIỆC CƯỚI NHÀ GÁI",
+    date: "2025/11/27",
+    time: "16:00",
+    timeAmLich: "(Tức ngày 08 tháng 10 năm Ất Tỵ)",
+    home: `Tại gia đình nhà gái`,
+    address: `${CoupleInfo.female.address}`,
     image: {
       src: "/images/events/1.jpg",
       type: "image/jpeg",
@@ -116,24 +134,12 @@ export const WeddingEventInfos = [
     active: true,
   },
   {
-    title: "TIỆC CƯỚI NHÀ GÁI",
-    date: "2024/11/10",
-    time: "09:00",
-    address: `Tại gia đình nhà gái - ${CoupleInfo.female.address}`,
-    image: {
-      src: "/images/events/2.jpg",
-      type: "image/jpeg",
-      width: 300,
-      height: 300,
-    },
-    mapAddress: CoupleInfo.female.mapAddress,
-    active: false,
-  },
-  {
-    title: "LỄ CƯỚI NHÀ TRAI",
-    date: "2024/11/10",
-    time: "14:00",
-    address: `Tại gia đình nhà trai - ${CoupleInfo.male.address}`,
+    title: "TIỆC CƯỚI NHÀ TRAI",
+    date: "2025/11/28",
+    time: "15:00",
+    timeAmLich: "(Tức ngày 09 tháng 10 năm Ất Tỵ)",
+    home: `Tại gia đình nhà trai`,
+    address: `${CoupleInfo.male.address}`,
     image: {
       src: "/images/events/3.jpg",
       type: "image/jpeg",
@@ -144,12 +150,14 @@ export const WeddingEventInfos = [
     active: true,
   },
   {
-    title: "TIỆC CƯỚI NHÀ TRAI",
-    date: "2024/11/09",
-    time: "16:30",
-    address: `Tại gia đình nhà trai - ${CoupleInfo.male.address}`,
+    title: "LỄ THÀNH HÔN",
+    date: "2025/11/28",
+    time: "06:00",
+    timeAmLich: "(Tức ngày 09 tháng 10 năm Ất Tỵ)",
+    home: `Tại gia đình nhà trai`,
+    address: `${CoupleInfo.male.address}`,
     image: {
-      src: "/images/events/4.jpg",
+      src: "/images/events/3.jpg",
       type: "image/jpeg",
       width: 300,
       height: 300,
