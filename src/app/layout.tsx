@@ -35,8 +35,8 @@ export const metadata: Metadata = {
     siteName: "Huy & Thương Wedding",
     images: [
       {
-        url: `${myMetadata.url}${myMetadata.image.src}`, // ✅ cần đường dẫn tuyệt đối
-        width: 1200, // ✅ chuẩn Facebook, Zalo
+        url: `${myMetadata.url}${myMetadata.image.src}`, // ✅ full URL
+        width: 1200,
         height: 630,
         alt: "Huy & Thương Wedding",
         type: myMetadata.image.type,

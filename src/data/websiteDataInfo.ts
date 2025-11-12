@@ -104,16 +104,16 @@ export const Metadata = {
     type: "image/png",
     src: "/icons/logo_32.png",
   },
-  keywords: "Happy, Wedding, My Wedding, Lễ cưới, My Love, Love u, Love You",
+  keywords: "Happy, Wedding, My Wedding, Lễ cưới, Love, Huy Thương",
   description:
     "Chúng tôi trân trọng mời bạn đến chung vui trong ngày cưới của chúng tôi.",
   image: {
-    src: "/images/stories/2.jpg",
+    src: "/images/stories/2.jpg", // ✅ ảnh thật, không bị qua _next/image
     type: "image/jpeg",
-    width: 1200, // ✅ Chuẩn preview
-    height: 630, // ✅ Chuẩn preview
+    width: 1200,
+    height: 630,
   },
-  url: "https://wedding-huy-thuong.vercel.app", // ✅ Đặt URL thật tại đây
+  url: "https://wedding-huy-thuong.vercel.app", // ✅ tuyệt đối
 };
 
 export const WeddingEventInfos = [
