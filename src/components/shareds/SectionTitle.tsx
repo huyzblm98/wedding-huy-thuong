@@ -21,7 +21,7 @@ export function SectionTitle({ title, quote, showDecor }: SectionTitleProps) {
         }
       >
         <div data-aos="zoom-in-down">
-          <h1 className="text-pink-400 font-black text-6xl md:text-7xl mb-6 ">
+          <h1 className="text-red-400 font-black text-6xl md:text-7xl mb-6 ">
             {title}
           </h1>
         </div>

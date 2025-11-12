@@ -1,9 +1,11 @@
-// app/layout.tsx (Next.js 13+)
 import type { Metadata } from "next";
 import { Dancing_Script } from "next/font/google";
-import "./globals.css";
+// @ts-ignore
 import "animate.css";
-// pages/_app.tsx or app/layout.tsx (Next.js 13+)
+// @ts-ignore
+import "./globals.css";
+
+// @ts-ignore
 import "../styles/globals.scss";
 import { Metadata as myMetadata } from "@/data/websiteDataInfo";
 
@@ -17,7 +19,7 @@ export const metadata: Metadata = {
   title: myMetadata.title,
   description: myMetadata.description,
   keywords: myMetadata.keywords,
-  authors: [{ name: "Hieu&Phuong" }],
+  authors: [{ name: "Huy&Thuong" }],
   icons: {
     icon: {
       url: myMetadata.icon.src,

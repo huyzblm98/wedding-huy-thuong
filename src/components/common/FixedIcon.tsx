@@ -35,17 +35,17 @@ export function FixedIcon() {
   return (
     <>
       <div className="fixed z-50 bottom-10 left-6 sm:right-6 sm:left-auto space-y-5">
-        <a href="#send-wish">
+        {/* <a href="#send-wish">
           <div
             className="p-3 rounded-full z-50 bg-pink-500 hover:bg-pink-600 hover:scale-110 cursor-pointer"
             title="Gửi lời chúc"
           >
             <ChatBubbleLeftIcon className="w-5 h-5 text-white"></ChatBubbleLeftIcon>
           </div>
-        </a>
+        </a> */}
 
         <div
-          className="relative play-mp3 p-3 mt-2 rounded-full z-50 bg-pink-500 hover:bg-pink-600 hover:scale-110 cursor-pointer"
+          className="relative play-mp3 p-3 mt-2 rounded-full z-50 bg-red-500 hover:bg-pink-600 hover:scale-110 cursor-pointer"
           title="Phát nhạc"
         >
           {isPlayMp3 && (
@@ -61,7 +61,7 @@ export function FixedIcon() {
         </div>
       </div>
 
-      <audio src="/music/Xa-La.mp3" ref={mp3Ref} className="hidden"></audio>
+      <audio src="/music/nhac.mov" ref={mp3Ref} className="hidden"></audio>
     </>
   );
 }

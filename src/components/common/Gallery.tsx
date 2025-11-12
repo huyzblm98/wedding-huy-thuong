@@ -1,43 +1,48 @@
+"use client";
 import Image from "next/image";
 import React, { useState } from "react";
 import { SectionTitle } from "@/components/shareds/SectionTitle";
+import { motion } from "framer-motion";
 
 export function Gallery() {
   const [galleries] = useState(Array(9).fill(0));
 
   return (
-    <>
-      <section className="container mx-auto" id="album">
-        <div className="w-full mx-auto py-20 px-3">
-          <div className="flex flex-col w-full mb-10 lg:mb-20">
-            <div className={"flex flex-col items-center mb-6 "}>
-              <h1 className="text-pink-400 font-black text-5xl sm:text-6xl md:text-7xl"></h1>
-            </div>
-            <SectionTitle title="Album Ảnh Cưới"></SectionTitle>
-            <div className="text-center">
-              <q className="italic md:text-lg lg:text-xl font-[Dancing_Script]">
-                Tình yêu từ người khác mang đến cho ta sức mạnh, còn tình yêu ta
-                dành cho người khác mang đến cho ta sự dũng cảm.
-              </q>
-            </div>
-          </div>
-          <div className="w-full columns-2 lg:columns-3 gap-4 lg:gap-8 space-y-4 lg:space-y-8">
-            {galleries.map((_, index) => (
-              <Image
-                key={index}
-                className={`transition-all duration-1000 ease-linear w-full h-full`}
-                data-aos="fade-up"
-                data-aos-anchor-placement="center-center"
-                data-aos-delay={100 + (index + 1)}
-                src={`/images/galleries/${index + 1}.jpg`}
-                width={500}
-                height={500}
-                alt="Love"
-              ></Image>
-            ))}
+    <section className="container mx-auto" id="album">
+      <div className="w-full mx-auto py-20 px-3">
+        {/* Header */}
+        <div className="flex flex-col w-full mb-10 lg:mb-20 items-center">
+          <SectionTitle title="Album Ảnh Cưới" />
+          <div className="text-center mt-4">
+            <q className="italic md:text-lg lg:text-xl font-[Dancing_Script]">
+              Tình yêu từ người khác mang đến cho ta sức mạnh, còn tình yêu ta
+              dành cho người khác mang đến cho ta sự dũng cảm.
+            </q>
           </div>
         </div>
-      </section>
-    </>
+
+        {/* Masonry Gallery */}
+        <div className="columns-2 md:columns-3 gap-4">
+          {galleries.map((_, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="mb-4 break-inside-avoid rounded-lg overflow-hidden relative cursor-pointer hover:scale-105 hover:shadow-lg transition-transform duration-300"
+            >
+              <Image
+                src={`/images/galleries/${index + 1}.jpg`}
+                alt={`Love ${index + 1}`}
+                width={500}
+                height={500}
+                className="w-full h-auto object-contain"
+              />
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }

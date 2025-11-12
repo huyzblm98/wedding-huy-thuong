@@ -227,7 +227,7 @@ export function ConfirmJoin() {
             <div className="flex flex-col sm:flex-row w-full gap-4">
               <button
                 onClick={handleSubmit}
-                className="uppercase flex-1 hover:bg-pink-600 py-3 bg-pink-500 rounded-full transition-all duration-300 hover:scale-105"
+                className="uppercase flex-1 hover:bg-pink-600 py-3 bg-red-600 rounded-full transition-all duration-300 hover:scale-105"
               >
                 Gửi xác nhận
               </button>
