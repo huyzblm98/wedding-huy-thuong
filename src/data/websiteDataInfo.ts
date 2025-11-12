@@ -108,12 +108,12 @@ export const Metadata = {
   description:
     "Chúng tôi trân trọng mời bạn đến chung vui trong ngày cưới của chúng tôi.",
   image: {
-    src: "/images/meta/wedding.jpg",
+    src: "/images/stories/2.jpg",
     type: "image/jpeg",
-    width: 100,
-    height: 100,
+    width: 1200, // ✅ Chuẩn preview
+    height: 630, // ✅ Chuẩn preview
   },
-  url: "",
+  url: "https://wedding-huy-thuong.vercel.app", // ✅ Đặt URL thật tại đây
 };
 
 export const WeddingEventInfos = [

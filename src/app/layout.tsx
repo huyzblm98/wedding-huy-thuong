@@ -4,7 +4,6 @@ import { Dancing_Script } from "next/font/google";
 import "animate.css";
 // @ts-ignore
 import "./globals.css";
-
 // @ts-ignore
 import "../styles/globals.scss";
 import { Metadata as myMetadata } from "@/data/websiteDataInfo";
@@ -33,16 +32,25 @@ export const metadata: Metadata = {
     description: myMetadata.description,
     url: myMetadata.url,
     type: "website",
+    siteName: "Huy & Thương Wedding",
     images: [
       {
-        url: myMetadata.url + myMetadata.image.src,
+        url: `${myMetadata.url}${myMetadata.image.src}`, // ✅ cần đường dẫn tuyệt đối
+        width: 1200, // ✅ chuẩn Facebook, Zalo
+        height: 630,
+        alt: "Huy & Thương Wedding",
         type: myMetadata.image.type,
-        width: 100,
-        height: 100,
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: myMetadata.title,
+    description: myMetadata.description,
+    images: [`${myMetadata.url}${myMetadata.image.src}`],
+  },
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{
